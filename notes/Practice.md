@@ -41,6 +41,7 @@ WHERE C.city = 'Cairo';
 4. **INNER JOIN Orders O**: Joins the `Customers` table with the `Orders` table to ensure only customers with orders are updated.
 5. **WHERE C.city = 'London'**: Filters the update to apply only to customers whose current city is `'London'`.
 
+
 ##### isnull
 ```sql
 select isnull(st_fname, 'any string') as NewName
@@ -51,6 +52,7 @@ replaces the null with any string and can replace it with another column
 select isnull(st_fname. st_lname) as NewName -- we need to make alice because it's new column --
 from student
 ```
+
 ##### coalesce
 it function for multiple replacement if the another function is still null
 ```sql
@@ -58,23 +60,27 @@ select coalesce(st_fname, st_lname, st_address)
 from student
 ```
 => It's alternative for isnull
+
 ##### convert
 ```sql
 select st_fname+' '+convert(varchar(2), st_age)
 from student
 ```
 convert the different data type to the specific data type to concatenate 
+
 ##### concat
 ```sql
 select isnull(st_fname, '') + ' ' +convert(varchar(2), isnull(st_age, 0))
 from student
 ```
 => It's a lot of function and it will affect the performance so we have another function called concat
+
 ```sql
 select concat(st_fname,' ', st_age)
 from Student
 ```
 => It convert automatically the datatypes and also remove any null and replace it with blank string
+
 ##### Like
 ```sql 
 select *
@@ -112,6 +118,7 @@ where st_fname like '_a%' -- get any name that starts with any char and after it
 '%[_]%' --- string _ in between 'ahmed_ali'
 '[_]%[_]' --- starts with _ and ends with _ '_ahmed_'
 ```
+
 
 ##### order by
 ```sql
