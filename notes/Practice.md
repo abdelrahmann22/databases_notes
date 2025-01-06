@@ -47,7 +47,9 @@ WHERE C.city = 'Cairo';
 select isnull(st_fname, 'any string') as NewName
 from student
 ```
-replaces the null with any string and can replace it with another column
+
+Replaces the null with any string and can replace it with another column.
+
 ```sql
 select isnull(st_fname. st_lname) as NewName -- we need to make alice because it's new column --
 from student
@@ -59,27 +61,27 @@ it function for multiple replacement if the another function is still null
 select coalesce(st_fname, st_lname, st_address)
 from student
 ```
-=> It's alternative for isnull
+It's alternative for isnull.
 
 ##### convert
 ```sql
 select st_fname+' '+convert(varchar(2), st_age)
 from student
 ```
-convert the different data type to the specific data type to concatenate 
+Convert the different data type to the specific data type to concatenate .
 
 ##### concat
 ```sql
 select isnull(st_fname, '') + ' ' +convert(varchar(2), isnull(st_age, 0))
 from student
 ```
-=> It's a lot of function and it will affect the performance so we have another function called concat
+It's a lot of function and it will affect the performance so we have another function called concat.
 
 ```sql
 select concat(st_fname,' ', st_age)
 from Student
 ```
-=> It convert automatically the datatypes and also remove any null and replace it with blank string
+It convert automatically the datatypes and also remove any null and replace it with blank string.
 
 ##### Like
 ```sql 
@@ -87,7 +89,8 @@ select *
 from Student
 where st_fname = 'ahmed'
 ```
-=> Use `=` for exact matches (e.g., `st_fname = 'ahmed'`).
+Use `=` for exact matches (e.g., `st_fname = 'ahmed'`).
+
 ```sql
 select *
 from student
@@ -126,7 +129,7 @@ select st_fname, dept_id, st_age
 from Student
 order by 1
 ```
-=> order by the first column
+Order by the first column.
 
 ```sql
 select st_fname, dept_id, st_age
