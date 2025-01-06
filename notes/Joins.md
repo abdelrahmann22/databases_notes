@@ -158,3 +158,11 @@ Select X.St_fname as Sname, y.*
 From Student X, Student Y
 Where Y.St_ID = X.St_super
 ```
+
+##### Join Multi Tables
+```sql
+select st_fname, crs_name, grade
+from Student S, Stud_course SC, Course C
+where S.St_id=Sc.st_id and c.Crs_id=Sc.Crs_Id
+```
+

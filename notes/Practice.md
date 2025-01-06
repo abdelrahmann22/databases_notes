@@ -1,4 +1,4 @@
-![[DBImage.png]]
+![](images/DBImage.png)
 ##### Join Multi Table
 ```sql
 select ProductName, OrderDate, CustomerName
