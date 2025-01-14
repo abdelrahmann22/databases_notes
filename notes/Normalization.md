@@ -8,7 +8,9 @@
 - Usually done in stages
 #### Goals to avoid anomalies
 -> **Insertion Anomaly**: adding new rows forces user to create duplication.
+
 -> **Deletion Anomaly**: deleting rows may cause a loss of data that would be needed for other future rows.
+
 -> **Modification anomaly**: Changing data in a row forces changes to other rows because of duplication.
 #### Functional dependency
 - A constraint between two attributes (columns) or two sets of columns
