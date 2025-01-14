@@ -17,22 +17,33 @@
 A -> B 
 - if "for every valid instance of A, That value of A uniquely determines the value of B".
 - or if"existing of B depending on a value of A".
+
 "B depended on A"
+
 SSN -> Ename
+
 Pnum -> ProLocation
+
 It's good when
+
 A -> B,C,D
+
 PK -> Columns
+
 Sid -> name, age, address
+
 **When I get PK I can get the rest**
 #### Types of functional dependency
 -> **Full functional Dependency**
+
 - Attribute is fully functional dependency on a PK if its value determined by the Whole PK.
 
 -> **Partial Functional Dependency**
+
 - Attribute if has a Partial functional Dependency on a PK if its value is determined by a part of the pk (Composite Key).
 
 -> **Transitive Functional Dependency**
+
 - Attribute is transitive functional dependency on a table If its value is determined by another non-key attribute which it self determined by a PK.
 #### Steps in normalization
 ![](images/stepsofnormalization.png)
