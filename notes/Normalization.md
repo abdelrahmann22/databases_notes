@@ -28,8 +28,10 @@ Sid -> name, age, address
 #### Types of functional dependency
 -> **Full functional Dependency**
 - Attribute is fully functional dependency on a PK if its value determined by the Whole PK.
+
 -> **Partial Functional Dependency**
 - Attribute if has a Partial functional Dependency on a PK if its value is determined by a part of the pk (Composite Key).
+
 -> **Transitive Functional Dependency**
 - Attribute is transitive functional dependency on a table If its value is determined by another non-key attribute which it self determined by a PK.
 #### Steps in normalization
@@ -39,7 +41,9 @@ Sid -> name, age, address
 
 #### 1NF
 -> Relation is in first normal form if it contains no multivalued or composite attributes.
+
 -> Remove repeating groups to a new table as already demonstrated, "Carrying" the PK as a FK.
+
 -> All columns (fields) must be atomic
 - means: no repeating items in columns
 
@@ -48,6 +52,7 @@ Sid -> name, age, address
 #### 2NF
 -> a relation is in second normal form if it is in first normal form and every non-key
 attribute is fully functionally dependant on the primary key.
+
 -> i.e. remove partial functional dependencies so non-key attribute depends on just part of the key.
 
 ![](images/2nfexample.png)
